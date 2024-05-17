@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bot.css') }}">
+    
+</head>
+<body>
+    <h1>Chat-bot</h1>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Menu</a></li>
+                <li><a href="{{ url_for('arquivo') }}">Enviar arquivos</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+        </main>
+    </div>
+
+    <div class="box_chat" id="box_chat">
+        <div id="mensagem"></div>
+
+    </div>
+    <form id="form" name="form" class="caixaTexto" >
+        <div class="form">
+        <input name="enter" id="enter" type="text" placeholder='Press enter...'>
+        <!-- <button onclick="enviar_mensagem(document.form.enter.value);" id="meu_botao">Enviar</button> -->
+        <button onclick="adicionar()" id="meu_botao">Enviar</button>
+        </div>
+    </form>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/arquivo.css') }}">
+</head>
+<body>
+    <h1>Enviar Arquivos</h1>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Menu</a></li>
+                <li><a href="{{ url_for('bot') }}">Chat-bot</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+        </main>
+    </div>
+    <div class="overlay" id="overlay">
+        <div class="upload-popup" id="upload-popup">
+            <h2>Enviar arquivos</h2>
+        </div>
+    </div>
+    <div class="box_arquivo">
+        <h2></h2>
+        <div class="digit">
+            <p>Enviar arquivo...</p>
+        </div>
+        <input type="file" id="arquivo_input" style="display: none;">
+        <button id="abrir_arquivo">Anexar Arquivo</button>
+        <br>
+        <span id="nome_arquivo"></span>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
